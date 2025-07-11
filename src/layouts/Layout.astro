@@ -1,6 +1,6 @@
 ---
 import "./src/styles/global.css";
-import Header from "../components/Header.astro";
+import { Header } from "../components/header/Header.jsx";
 import { ClientRouter } from "astro:transitions";
 
 interface Props {
@@ -30,7 +30,7 @@ const {
     <title>{title}</title>
   </head>
   <body class="min-h-screen">
-    <Header />
+    <Header client:load />
     <slot />
   </body>
 </html>
