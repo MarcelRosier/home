@@ -11,7 +11,7 @@ const { researchEntry } = Astro.props;
 ---
 
 <div>
-  <h3 class="m-0">{researchEntry.data.title}</h3>
+  <h3 class="m-0 text-2xl">{researchEntry.data.title}</h3>
   <AuthorList authors={researchEntry.data.authors} />
   <div class="flex items-center mt-2 space-x-4">
     <span class="text-sm text-gray-600">{researchEntry.data.date}</span>
