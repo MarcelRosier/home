@@ -32,7 +32,7 @@ export function Footer() {
             }
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-110 transition-transform"
+            className="hover:scale-115 transition-transform"
           >
             <SiGooglescholar />
           </a>

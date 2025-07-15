@@ -41,7 +41,7 @@ const LinkList = ({ links }) => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform"
+                className="hover:scale-115 transition-transform"
               >
                 {getIcon(link.icon)}
               </a>
