@@ -46,7 +46,7 @@ const LinkList = ({ links }) => {
                 {getIcon(link.icon)}
               </a>
             </TooltipTrigger>
-            <TooltipContent className="bg-neutral-800 text-white text-sm rounded px-2 py-1">
+            <TooltipContent className="text-sm rounded px-2 py-1 shadow-md">
               {link.label}
             </TooltipContent>
           </Tooltip>
