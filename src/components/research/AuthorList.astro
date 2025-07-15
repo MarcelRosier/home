@@ -1,0 +1,46 @@
+---
+import Author from "./Author.astro";
+
+const { authors, short = false } = Astro.props;
+
+if (!authors || authors.length === 0) return null;
+
+const maxAuthorsToShow = 8;
+const displayedAuthors = authors.slice(0, maxAuthorsToShow);
+const hasMore = authors.length > maxAuthorsToShow;
+---
+
+{
+  short ? (
+    <>
+      <Author
+        author={authors[0]}
+        abbreviateFirstName={true}
+        className="text-base font-light text-muted-foreground sm:text-lg"
+      />
+      <span class="font-light text-muted-foreground sm:text-lg">et al.</span>
+    </>
+  ) : (
+    <div class="flex flex-wrap items-center text-muted-foreground truncate">
+      {displayedAuthors.map((author, index) => {
+        const isHighlighted = author == "Marcel Rosier";
+        return (
+          <>
+            <Author
+              author={author}
+              abbreviateFirstName={true}
+              class="text-base font-light text-muted-foreground sm:text-lg"
+              highlight={isHighlighted}
+            />
+            {index < displayedAuthors.length - 1 && <span>,&nbsp;</span>}
+          </>
+        );
+      })}
+      {hasMore && (
+        <span class="text-base font-light text-muted-foreground sm:text-lg">
+          , ...
+        </span>
+      )}
+    </div>
+  )
+}

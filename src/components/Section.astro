@@ -1,0 +1,9 @@
+---
+import { cn } from "@/lib/utils";
+
+const { className } = Astro.props;
+---
+
+<section class={cn("mt-12 md:mt-40", className)}>
+  <slot />
+</section>
