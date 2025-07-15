@@ -2,7 +2,7 @@
 
 import moment from "moment";
 
-import { SiGithub, SiLinkedin } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiGooglescholar } from "react-icons/si";
 
 export function Footer() {
   return (
@@ -25,6 +25,16 @@ export function Footer() {
             className="hover:scale-110 transition-transform"
           >
             <SiLinkedin />
+          </a>
+          <a
+            href={
+              "https://scholar.google.com/citations?hl=de&user=Tggzt-UAAAAJ"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+          >
+            <SiGooglescholar />
           </a>
         </div>
         <p className="text-xs text-muted-foreground sm:text-sm 2xl:text-base">
