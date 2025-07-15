@@ -1,15 +1,6 @@
 ---
-import { Icon } from "astro-icon/components";
-
+import LinkList from "@/components/research/LinkList";
 const links = Astro.props.links;
 ---
 
-<div class="flex flex-row space-x-2">
-  {
-    links.map((link) => (
-      <a href={link.url} target="_blank" rel="noopener noreferrer">
-        <Icon name={`simple-icons:${link.icon}`} />
-      </a>
-    ))
-  }
-</div>
+<LinkList links={links} client:load />
