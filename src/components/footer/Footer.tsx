@@ -29,7 +29,7 @@ function IconLink({ href, icon: Icon, label }: IconLinkProps) {
           rel="noopener noreferrer"
           className="hover:scale-115 transition-transform"
         >
-          <Icon className="w-5 h-5" />
+          <Icon className="w-4 h-4" />
         </a>
       </TooltipTrigger>
       <TooltipContent className="text-sm rounded px-2 py-1 shadow-md">
