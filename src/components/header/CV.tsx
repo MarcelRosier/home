@@ -19,7 +19,7 @@ export function CV() {
         </a>
       </TooltipTrigger>
       <TooltipContent>
-        <div className="flex items-center gap-x-1 text-sm">Checkout my CV</div>
+        <p className="flex items-center gap-x-1 text-sm">Checkout my CV</p>
       </TooltipContent>
     </Tooltip>
   );
