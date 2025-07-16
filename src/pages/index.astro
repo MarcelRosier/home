@@ -1,12 +1,14 @@
 ---
+import Photography from "@/components/photography/Photography.astro";
+import Projects from "@/components/projects/Projects.astro";
 import ResearchList from "@/components/research/ResearchList.astro";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
-import { Footer } from "@/components/footer/Footer";
 ---
 
 <Layout title="Marcel Rosier">
   <Hero />
   <ResearchList />
-  <Footer client:load />
+  <Projects />
+  <Photography />
 </Layout>

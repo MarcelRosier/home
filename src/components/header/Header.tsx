@@ -1,6 +1,7 @@
 import { ThemeToggle } from "@/components/header/ThemeToggle";
 import useScroll from "@/hooks/use-scroll";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
+import { CV } from "@/components/header/CV";
 
 export function Header() {
   const { scrollPosition } = useScroll();
@@ -17,9 +18,9 @@ export function Header() {
         <div className="container z-50 mx-auto flex items-center justify-between">
           {/* <Logo /> */}
           <p>MR</p>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 ">
+            <CV />
             <ThemeToggle />
-            {/* <button>B</button> */}
           </div>
         </div>
       </div>

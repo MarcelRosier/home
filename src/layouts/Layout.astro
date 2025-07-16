@@ -3,6 +3,7 @@ import "@/styles/global.css";
 import { Header } from "../components/header/Header.jsx";
 import { ClientRouter } from "astro:transitions";
 import { cx } from "class-variance-authority";
+import { Footer } from "@/components/footer/Footer";
 
 interface Props {
   title: string;
@@ -59,6 +60,7 @@ const {
       <div class="mt-40 flex-1 sm:mt-56 2xl:mt-96">
         <slot />
       </div>
+      <Footer client:load />
     </div>
   </body>
 </html>
