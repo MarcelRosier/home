@@ -8,8 +8,8 @@ export function Footer() {
   return (
     <div className="mb-12 mt-16 w-full 2xl:mt-24">
       <hr />
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-4">
-        <div className="flex items-center gap-x-2">
+      <div className="flex justify-between mt-4">
+        <div className="flex items-center gap-x-4">
           <a
             href={"https://github.com/MarcelRosier"}
             target="_blank"
