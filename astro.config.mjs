@@ -16,6 +16,6 @@ export default defineConfig({
   },
 
   integrations: [mdx(), react(), icon()],
-  site: "https://marcelrosier.github.io",
-  base: "/home",
+  site: "https://marcelrosier.de",
+  base: "",
 });
