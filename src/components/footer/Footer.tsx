@@ -52,7 +52,7 @@ export function Footer() {
               label="GitHub Profile"
             />
             <IconLink
-              href="www.linkedin.com/in/marcel-rosier"
+              href="https://www.linkedin.com/in/marcel-rosier"
               icon={SiLinkedin}
               label="LinkedIn Profile"
             />
