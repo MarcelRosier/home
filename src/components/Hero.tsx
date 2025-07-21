@@ -5,7 +5,7 @@ export default function Hero() {
     <div className="flex items-center">
       {/* Avatar */}
       <motion.img
-        src="/avatar.png"
+        src="/images/avatar.webp"
         alt="Avatar"
         className="rounded-full w-32 h-32 object-cover mr-4"
         initial={{ opacity: 0, scale: 0.5 }}
