@@ -2,7 +2,7 @@ import { ThemeToggle } from "@/components/header/ThemeToggle";
 import useScroll from "@/hooks/use-scroll";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { CV } from "@/components/header/CV";
-import { Logo } from "@/components/header/Logo";
+import { Logo } from "@/components/header/logo";
 
 export function Header() {
   const { scrollPosition } = useScroll();
