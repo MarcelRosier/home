@@ -2,12 +2,12 @@
 import Photography from "@/components/photography/Photography.astro";
 import Projects from "@/components/projects/Projects.astro";
 import ResearchList from "@/components/research/ResearchList.astro";
-import Hero from "../components/Hero.astro";
+import Hero from "../components/Hero.tsx";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Marcel Rosier">
-  <Hero />
+  <Hero client:load />
   <ResearchList />
   <Projects />
   <Photography />
