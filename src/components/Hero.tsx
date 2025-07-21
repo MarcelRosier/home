@@ -1,6 +1,26 @@
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
+
+import type { Variants } from "framer-motion";
 
 export default function Hero() {
+  const textItem: Variants = {
+    hidden: { x: -100, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const textWrapper: Variants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.3, // Stagger children
+      },
+    },
+  };
+
   return (
     <div className="flex items-center">
       {/* Avatar */}
@@ -31,18 +51,19 @@ export default function Hero() {
         {/* Sliding Text */}
         <motion.div
           className="flex flex-col space-y-2 pl-4"
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{
-            duration: 1,
-            ease: "easeOut",
-            delay: 0.4,
-          }}
+          variants={textWrapper}
+          initial="hidden"
+          animate="show"
         >
-          <h1 className="text-4xl font-bold">Hey there!</h1>
-          <p className="text-lg text-muted-foreground">
+          <motion.h1 className="text-4xl font-bold" variants={textItem}>
+            Hey there!
+          </motion.h1>
+          <motion.p
+            className="text-lg text-muted-foreground"
+            variants={textItem}
+          >
             I’m Marcel, a software engineer, researcher and photographer.
-          </p>
+          </motion.p>
         </motion.div>
       </div>
     </div>
