@@ -1,26 +1,16 @@
-"use client";
-
-function M() {
-  return <p>M</p>;
-  // return (
-  //   <Tooltip>
-  //     <TooltipTrigger tabIndex={-1}>
-  //       <a
-  //         href="/"
-  //         className="block h-12 w-12 overflow-hidden rounded-md outline-accent-foreground 2xl:h-16 2xl:w-16"
-  //       >
-  //         <h1 className="-mt-1 text-5xl font-bold 2xl:text-6xl">m</h1>
-  //       </a>
-  //     </TooltipTrigger>
-  //     <TooltipContent>Back Home</TooltipContent>
-  //   </Tooltip>
-  // );
-}
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 export function Logo() {
   return (
-    <div className="flex items-center space-x-8">
-      <M />
-    </div>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <a href={"/cv.pdf"} target="_blank" rel="noopener noreferrer">
+          <p className="text-xl tracking-[-.22em]">MR</p>
+        </a>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p className="flex items-center gap-x-1 text-sm">Back home</p>
+      </TooltipContent>
+    </Tooltip>
   );
 }
