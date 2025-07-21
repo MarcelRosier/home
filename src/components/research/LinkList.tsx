@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/tooltip";
 
 import { SiArxiv, SiGithub } from "react-icons/si";
+import { FaRegFileImage } from "react-icons/fa";
 
 // import { FC } from "react";
 
@@ -25,6 +26,8 @@ const getIcon = (icon: string) => {
       return <SiArxiv />;
     case "github":
       return <SiGithub />;
+    case "poster":
+      return <FaRegFileImage />;
     default:
       return null;
   }

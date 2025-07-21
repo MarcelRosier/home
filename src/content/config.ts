@@ -11,7 +11,7 @@ const researchCollection = defineCollection({
       tags: z.array(z.string()),
       links: z.array(
         z.object({
-          url: z.string().url(),
+          url: z.string(),
           label: z.string(),
           icon: z.string(),
         })
