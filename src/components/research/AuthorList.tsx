@@ -1,4 +1,5 @@
 import Author from "./Author";
+import { Fragment } from "react";
 
 function AuthorList({ authors, short = false }) {
   if (!authors || authors.length === 0) return null;
@@ -23,7 +24,7 @@ function AuthorList({ authors, short = false }) {
       {displayedAuthors.map((author, index) => {
         const isHighlighted = author == "Marcel Rosier";
         return (
-          <>
+          <Fragment key={index}>
             <Author
               author={author}
               abbreviateFirstName={true}
@@ -31,9 +32,10 @@ function AuthorList({ authors, short = false }) {
               highlight={isHighlighted}
             />
             {index < displayedAuthors.length - 1 && <span>,&nbsp;</span>}
-          </>
+          </Fragment>
         );
       })}
+
       {hasMore && (
         <span className="font-light text-muted-foreground">, et al.</span>
       )}
