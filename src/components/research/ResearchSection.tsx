@@ -1,5 +1,6 @@
 import { motion, easeOut } from "motion/react";
 import ResearchEntry from "./ResearchEntry"; // ensure this is also a .tsx file
+import { HiDocumentMagnifyingGlass } from "react-icons/hi2";
 
 type Props = {
   entries: any;
@@ -20,7 +21,10 @@ export default function ResearchList({ entries }: Props) {
         whileInView="show"
         viewport={{ once: false, amount: 0.3 }}
       >
-        Research
+        <div className="flex items-center">
+          <HiDocumentMagnifyingGlass className="mr-1" />
+          Research
+        </div>
       </motion.h2>
       <div className="flex flex-col space-y-8 2xl:space-y-12">
         {entries.map((entry, index) => (
