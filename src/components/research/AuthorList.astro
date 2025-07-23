@@ -16,12 +16,12 @@ const hasMore = authors.length > maxAuthorsToShow;
       <Author
         author={authors[0]}
         abbreviateFirstName={true}
-        className="text-base font-light text-muted-foreground sm:text-lg"
+        className="text-xs font-light text-muted-foreground sm:text-sm"
       />
-      <span class="font-light text-muted-foreground sm:text-lg">et al.</span>
+      <span class="font-light text-muted-foreground sm:text-sm">et al.</span>
     </>
   ) : (
-    <div class="flex flex-wrap items-center text-muted-foreground truncate">
+    <div class="flex flex-wrap items-center text-muted-foreground truncate text-xs sm:text-sm">
       {displayedAuthors.map((author, index) => {
         const isHighlighted = author == "Marcel Rosier";
         return (
@@ -29,7 +29,7 @@ const hasMore = authors.length > maxAuthorsToShow;
             <Author
               author={author}
               abbreviateFirstName={true}
-              class="text-base font-light text-muted-foreground sm:text-lg"
+              class="font-light text-muted-foreground"
               highlight={isHighlighted}
             />
             {index < displayedAuthors.length - 1 && <span>,&nbsp;</span>}
@@ -37,9 +37,7 @@ const hasMore = authors.length > maxAuthorsToShow;
         );
       })}
       {hasMore && (
-        <span class="text-base font-light text-muted-foreground sm:text-lg">
-          , ...
-        </span>
+        <span class="font-light text-muted-foreground">, et al.</span>
       )}
     </div>
   )
