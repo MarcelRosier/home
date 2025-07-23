@@ -17,6 +17,7 @@ export function CV() {
         <a href={"/cv.pdf"} target="_blank" rel="noopener noreferrer">
           <Button size="icon" variant="ghost">
             <FileText />
+            <span className="sr-only">Download CV</span>
           </Button>
         </a>
       </TooltipTrigger>

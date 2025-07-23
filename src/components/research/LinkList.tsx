@@ -47,6 +47,7 @@ const LinkList = ({ links }) => {
                 className="hover:scale-115 transition-transform"
               >
                 {getIcon(link.icon)}
+                <span className="sr-only">{link.label}</span>
               </a>
             </TooltipTrigger>
             <TooltipContent className="text-sm rounded px-2 py-1 shadow-md">

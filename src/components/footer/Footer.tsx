@@ -30,6 +30,7 @@ function IconLink({ href, icon: Icon, label }: IconLinkProps) {
           className="hover:scale-115 transition-transform"
         >
           <Icon className="w-4 h-4" />
+          <span className="sr-only">{label}</span>
         </a>
       </TooltipTrigger>
       <TooltipContent className="text-sm rounded px-2 py-1 shadow-md">
