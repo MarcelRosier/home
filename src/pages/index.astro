@@ -1,5 +1,5 @@
 ---
-import Photography from "@/components/photography/Photography.astro";
+import Photography from "@/components/photography/Photography.tsx";
 import Projects from "@/components/projects/Projects.astro";
 import Research from "@/components/research/Research.astro";
 import Hero from "../components/Hero.tsx";
@@ -9,6 +9,6 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Marcel Rosier">
   <Hero client:load />
   <Research />
-  <Projects />
   <Photography />
+  <Projects />
 </Layout>
