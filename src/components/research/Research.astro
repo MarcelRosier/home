@@ -1,0 +1,14 @@
+---
+// ResearchList.astro
+import ResearchSection from "@/components/research/ResearchSection.tsx";
+import { getCollection } from "astro:content";
+
+const researchEntries = await getCollection("research");
+
+const parseDate = (str: string) => new Date(Date.parse(str));
+const sortedResearchEntries = researchEntries.sort(
+  (a, b) => parseDate(b.data.date).getTime() - parseDate(a.data.date).getTime()
+);
+---
+
+<ResearchSection entries={sortedResearchEntries} client:load />

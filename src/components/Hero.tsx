@@ -1,6 +1,6 @@
-import { motion, easeOut } from "framer-motion";
+import { motion, easeOut } from "motion/react";
 
-import type { Variants } from "framer-motion";
+import type { Variants } from "motion/react";
 
 export default function Hero() {
   const textItem: Variants = {
