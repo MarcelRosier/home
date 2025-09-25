@@ -1,62 +1,86 @@
 [
     {
-        "title": "Twin Peaks Sunrise",
+        "id": "twin-peaks-sunrise",
+        "title": "peaks",
         "url": "/images/photography/DSC03420.webp",
-        "location": "San Francisco, CA"
+        "location": "San Francisco, CA",
+        "date": "2024-03"
     },
     {
-        "title": "Rainy Day",
+        "id": "rainy-day",
+        "title": "do you know?",
         "url": "/images/photography/DSCF0215.webp",
-        "location": "Munich, Germany"
+        "location": "Munich, Germany",
+        "date": "2024-06"
     },
     {
+        "id": "metro-mirror",
         "title": "Metro mirror",
         "url": "/images/photography/DSCF1292.webp",
-        "location": "Munich, Germany"
+        "location": "Munich, Germany",
+        "date": "2024-08"
     },
     {
+        "id": "umbrella-lady",
         "title": "Umbrella Lady",
         "url": "/images/photography/umbrella_lady.webp",
-        "location": "Osaka, Japan"
+        "location": "Osaka, Japan",
+        "date": "2025-05"
     },
     {
+        "id": "metro-brass",
         "title": "Metro brass",
         "url": "/images/photography/DSC04349.webp",
-        "location": "New York City, NY"
+        "location": "New York City, NY",
+        "date": "2024-03"
     },
     {
+        "id": "sunrise-mission-dolores",
         "title": "Sunrise Mission Dolores Park",
         "url": "/images/photography/DSC05056.webp",
-        "location": "San Francisco, CA"
+        "location": "San Francisco, CA",
+        "date": "2024-03"
     },
     {
-        "title": "Kamakura Beach",
+        "id": "kamakura-beach",
+        "title": "tiny little feeling",
         "url": "/images/photography/DSCF6059.webp",
-        "location": "Kamakura, Japan"
+        "location": "Kamakura, Japan",
+        "date": "2025-05"
     },
     {
-        "title": "Metro",
+        "id": "metro-tokyo",
+        "title": "Jede schönheit zerbricht // wenn man sie vergleicht?",
         "url": "/images/photography/DSCF5980-2.webp",
-        "location": "Tokyo, Japan"
+        "location": "Tokyo, Japan",
+        "date": "2025-05"
     },
     {
+        "id": "sunset-beach-angel",
         "title": "Sunset beach // Angel in white",
         "url": "/images/photography/DSCF5838.webp",
-        "location": "Kobe, Japan"
+        "location": "Kobe, Japan",
+        "date": "2025-05"
     },
     {
+        "id": "skyfall",
         "title": "Skyfall",
         "url": "/images/photography/DSCF4042.webp",
-        "location": "Tokyo, Japan"
+        "location": "Tokyo, Japan",
+        "date": "2025-05"
     },
     {
-        "title": "Smoking taxi",
+        "id": "smoking-taxi",
+        "title": "so young, loaded gun",
         "url": "/images/photography/DSCF4550.webp",
-        "location": "Kyoto, Japan"
+        "location": "Kyoto, Japan",
+        "date": "2025-05"
     },
     {
-        "title": "Munich Night Couple Rain",
+        "id": "munich-night-couple",
+        "title": "Goodbye",
         "url": "/images/photography/muc_nigh_couple_rain_23.webp",
-        "location": "Munich, Germany"
+        "location": "Munich, Germany",
+        "date": "2023-11"
     }
 ]
