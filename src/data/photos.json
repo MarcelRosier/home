@@ -4,83 +4,188 @@
         "title": "peaks",
         "url": "/images/photography/DSC03420.webp",
         "location": "San Francisco, CA",
-        "date": "2024-03"
+        "date": "2024/03"
     },
     {
         "id": "rainy-day",
         "title": "do you know?",
         "url": "/images/photography/DSCF0215.webp",
         "location": "Munich, Germany",
-        "date": "2024-06"
+        "date": "2024/06"
     },
     {
         "id": "metro-mirror",
         "title": "control",
         "url": "/images/photography/DSCF1292.webp",
         "location": "Munich, Germany",
-        "date": "2024-08"
+        "date": "2024/08"
+    },
+    {
+        "id": "dscf5626",
+        "title": "knockin",
+        "url": "/images/photography/DSCF5626.webp",
+        "location": "Shimanami Kaido, Japan",
+        "date": "2025/05"
+    },
+    {
+        "id": "radhuspladsen",
+        "title": "the arrogance of belonging",
+        "url": "/images/photography/radhuspladsen.webp",
+        "location": "Copenhagen, Denmark",
+        "date": "2023/02"
     },
     {
         "id": "umbrella-lady",
         "title": "countin' blues",
         "url": "/images/photography/umbrella_lady.webp",
         "location": "Osaka, Japan",
-        "date": "2025-05"
+        "date": "2025/05"
     },
     {
         "id": "metro-brass",
         "title": "I don't have any reasons,\nI've left them all behind",
         "url": "/images/photography/DSC04349.webp",
         "location": "New York City, NY",
-        "date": "2024-03"
+        "date": "2024/03"
     },
     {
         "id": "sunrise-mission-dolores",
         "title": "dolores",
         "url": "/images/photography/DSC05056.webp",
         "location": "San Francisco, CA",
-        "date": "2024-03"
+        "date": "2024/03"
     },
     {
         "id": "kamakura-beach",
         "title": "tiny little feeling",
         "url": "/images/photography/DSCF6059.webp",
         "location": "Kamakura, Japan",
-        "date": "2025-05"
+        "date": "2025/05"
     },
     {
         "id": "metro-tokyo",
         "title": "Jede schönheit zerbricht // wenn man sie vergleicht?",
         "url": "/images/photography/DSCF5980-2.webp",
         "location": "Tokyo, Japan",
-        "date": "2025-05"
+        "date": "2025/05"
     },
     {
         "id": "sunset-beach-angel",
         "title": "Angel in white",
         "url": "/images/photography/DSCF5838.webp",
         "location": "Kobe, Japan",
-        "date": "2025-05"
+        "date": "2025/05"
     },
     {
         "id": "skyfall",
         "title": "Skyfall",
         "url": "/images/photography/DSCF4042.webp",
         "location": "Tokyo, Japan",
-        "date": "2025-05"
+        "date": "2025/05"
     },
     {
         "id": "smoking-taxi",
         "title": "so young, loaded gun",
         "url": "/images/photography/DSCF4550.webp",
         "location": "Kyoto, Japan",
-        "date": "2025-05"
+        "date": "2025/05"
     },
     {
         "id": "munich-night-couple",
         "title": "Goodbye",
         "url": "/images/photography/muc_nigh_couple_rain_23.webp",
         "location": "Munich, Germany",
-        "date": "2023-11"
+        "date": "2023/11"
+    },
+    {
+        "id": "dsc01788",
+        "title": "café au lait und 2 kippen",
+        "url": "/images/photography/DSC01788.webp",
+        "location": "Munich, Germany",
+        "date": "2023/10"
+    },
+    {
+        "id": "dsc02475",
+        "title": "freebird",
+        "url": "/images/photography/DSC02475.webp",
+        "location": "San Francisco, CA",
+        "date": "2024/03"
+    },
+    {
+        "id": "dsc02948",
+        "title": "restless",
+        "url": "/images/photography/DSC02948.webp",
+        "location": "San Francisco, CA",
+        "date": "2024/03"
+    },
+    {
+        "id": "dsc03027",
+        "title": "learning to fly",
+        "url": "/images/photography/DSC03027.webp",
+        "location": "San Francisco, CA",
+        "date": "2024/03"
+    },
+    {
+        "id": "dsc03297",
+        "title": "irgendwo bis zu dir",
+        "url": "/images/photography/DSC03297.webp",
+        "location": "San Francisco, CA",
+        "date": "2024/03"
+    },
+    {
+        "id": "dsc03532",
+        "title": "demons",
+        "url": "/images/photography/DSC03532.webp",
+        "location": "New York City, NY",
+        "date": "2024/03"
+    },
+    {
+        "id": "dsc03559",
+        "title": "Focus",
+        "url": "/images/photography/DSC03559.webp",
+        "location": "New York City, NY",
+        "date": "2024/03"
+    },
+    {
+        "id": "dsc04331",
+        "title": "queens",
+        "url": "/images/photography/DSC04331.webp",
+        "location": "New York City, NY",
+        "date": "2024/03"
+    },
+    {
+        "id": "dsc04459",
+        "title": "andere stadt",
+        "url": "/images/photography/DSC04459.webp",
+        "location": "New York City, NY",
+        "date": "2024/03"
+    },
+    {
+        "id": "dsc05255",
+        "title": "still",
+        "url": "/images/photography/DSC05255-Enhanced-NR-Edit.webp",
+        "location": "Munich, Germany",
+        "date": "2024/05"
+    },
+    {
+        "id": "dscf1226",
+        "title": "unforgettable",
+        "url": "/images/photography/DSCF1226.webp",
+        "location": "Munich, Germany",
+        "date": "2024/08"
+    },
+    {
+        "id": "dscf4382",
+        "title": "make it",
+        "url": "/images/photography/DSCF4382.webp",
+        "location": "Kyoto, Japan",
+        "date": "2025/05"
+    },
+    {
+        "id": "dscf5250",
+        "title": "view",
+        "url": "/images/photography/DSCF5250.webp",
+        "location": "Fukuoka, Japan",
+        "date": "2025/05"
     }
 ]
