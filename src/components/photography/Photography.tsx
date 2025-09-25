@@ -37,17 +37,15 @@ function Photography() {
           Photography
         </div>
       </motion.h2>
-      <motion.div
-        variants={fadeIn}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6">
         {displayedPhotos.map((photo, index) => (
-          <div
-            className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+          <motion.div
+            variants={fadeIn}
             key={index}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.1 }}
+            className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
           >
             <img
               src={photo.url}
@@ -59,9 +57,9 @@ function Photography() {
                 {photo.location}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
 
       {hasMorePhotos && (
         <motion.div
