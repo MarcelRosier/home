@@ -14,8 +14,21 @@ export function ThemeToggle() {
   const [theme, setTheme] = React.useState<"light" | "dark">("dark");
 
   React.useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("dark");
-    setTheme(isDarkMode ? "dark" : "light");
+    // Check localStorage first, then fall back to DOM class
+    const getThemePreference = () => {
+      if (
+        typeof localStorage !== "undefined" &&
+        localStorage.getItem("theme")
+      ) {
+        return localStorage.getItem("theme");
+      }
+      return document.documentElement.classList.contains("dark")
+        ? "dark"
+        : "light";
+    };
+
+    const currentTheme = getThemePreference();
+    setTheme(currentTheme as "light" | "dark");
   }, []);
 
   const invert = React.useCallback((theme: string | undefined) => {
@@ -32,6 +45,10 @@ export function ThemeToggle() {
   React.useEffect(() => {
     const isDark = theme === "dark";
     document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+    // Also update localStorage so Layout.astro script picks up the change
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem("theme", theme);
+    }
   }, [theme]);
 
   const toggleTheme = React.useCallback(() => {
