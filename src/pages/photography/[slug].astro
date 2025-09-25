@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PhotoDetail from "../../components/photography/PhotoDetail";
+import photos from "../../data/photos.json";
+
+export async function getStaticPaths() {
+  return photos.map((photo) => ({
+    params: {
+      slug:
+        photo.id ||
+        photo.title
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, ""),
+    },
+    props: { photo },
+  }));
+}
+
+const { photo } = Astro.props;
+---
+
+<Layout title={`Marcel Rosier`}>
+  <PhotoDetail photo={photo} />
+</Layout>
