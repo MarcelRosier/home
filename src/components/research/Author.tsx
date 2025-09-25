@@ -27,7 +27,7 @@ function Author({
   const combinedClass = cn(
     "whitespace-nowrap",
     className,
-    highlight ? "underline underline-offset-4" : ""
+    highlight ? "underline underline-offset-2" : ""
   );
 
   return author.href ? (
