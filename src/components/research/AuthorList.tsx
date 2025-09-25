@@ -22,7 +22,7 @@ function AuthorList({ authors, short = false }) {
   ) : (
     <div className="flex flex-wrap items-center text-muted-foreground truncate text-xs sm:text-sm">
       {displayedAuthors.map((author, index) => {
-        const isHighlighted = author == "Marcel Rosier";
+        const isHighlighted = author == "Marcel Rosier" || author == "M. Rosier";
         return (
           <Fragment key={index}>
             <Author
