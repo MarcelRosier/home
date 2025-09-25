@@ -6,6 +6,7 @@ import {
   IoCalendar,
 } from "react-icons/io5";
 import photos from "@/data/photos.json";
+import { max } from "date-fns";
 
 type Photo = {
   id: string;
@@ -24,6 +25,7 @@ export default function PhotoDetail({ photo }: Props) {
   const currentIndex = photos.findIndex((p) => p.id === photo.id);
   const prevPhoto = photos[currentIndex - 1];
   const nextPhoto = photos[currentIndex + 1];
+  const maxTextLinkLength = 25;
 
   return (
     <main className="container mx-auto px-4 py-8 max-w-6xl">
@@ -70,12 +72,13 @@ export default function PhotoDetail({ photo }: Props) {
           {/* Actions */}
           <div className="space-y-3">
             <a href={photo.url} target="_blank" rel="noopener noreferrer">
-              <Button className="w-full">View Full Resolution</Button>
+              <Button variant="outline" className="w-full">
+                View Full Resolution
+              </Button>
             </a>
           </div>
         </div>
       </div>
-
       {/* Navigation to Next/Previous Photos */}
       <div className="mt-12 flex justify-between items-center">
         <div>
@@ -86,7 +89,9 @@ export default function PhotoDetail({ photo }: Props) {
                   <IoArrowBack className="mr-2" /> Previous
                 </div>
                 <span className="text-sm text-muted-foreground">
-                  {prevPhoto.title}
+                  {prevPhoto.title.length > maxTextLinkLength
+                    ? prevPhoto.title.substring(0, maxTextLinkLength) + "..."
+                    : prevPhoto.title}
                 </span>
               </Button>
             </a>
@@ -102,7 +107,9 @@ export default function PhotoDetail({ photo }: Props) {
                   <IoArrowForward className="ml-2" />
                 </div>
                 <span className="text-sm text-muted-foreground">
-                  {nextPhoto.title}
+                  {nextPhoto.title.length > maxTextLinkLength
+                    ? nextPhoto.title.substring(0, maxTextLinkLength) + "..."
+                    : nextPhoto.title}
                 </span>
               </Button>
             </a>
