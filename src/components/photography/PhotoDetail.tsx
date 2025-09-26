@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import {
-  IoLocation,
-  IoArrowBack,
-  IoArrowForward,
-  IoCalendar,
-} from "react-icons/io5";
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import photos from "@/data/photos.json";
-import { max } from "date-fns";
+import { useEffect } from "react";
+import { BsArrowLeftSquare, BsArrowRightSquare } from "react-icons/bs";
+import { IoArrowBack, IoCalendar, IoLocation } from "react-icons/io5";
 
 type Photo = {
   id: string;
@@ -26,6 +27,26 @@ export default function PhotoDetail({ photo }: Props) {
   const prevPhoto = photos[currentIndex - 1];
   const nextPhoto = photos[currentIndex + 1];
   const maxTextLinkLength = 25;
+
+  useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        if (nextPhoto) {
+          window.location.href = `/photography/${nextPhoto.id}`;
+        }
+      }
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        if (prevPhoto) {
+          window.location.href = `/photography/${prevPhoto.id}`;
+        }
+      }
+    };
+
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, []);
 
   return (
     <main className="container mx-auto px-4 py-8 max-w-6xl">
@@ -83,36 +104,59 @@ export default function PhotoDetail({ photo }: Props) {
       <div className="mt-12 flex justify-between items-center">
         <div>
           {prevPhoto && (
-            <a href={`/photography/${prevPhoto.id}`}>
-              <Button variant="link" className="flex-col items-start">
-                <div className="flex items-center">
-                  <IoArrowBack className="mr-2" /> Previous
-                </div>
-                <span className="text-sm text-muted-foreground">
-                  {prevPhoto.title.length > maxTextLinkLength
-                    ? prevPhoto.title.substring(0, maxTextLinkLength) + "..."
-                    : prevPhoto.title}
-                </span>
-              </Button>
-            </a>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a href={`/photography/${prevPhoto.id}`}>
+                  <Button variant="link" className="flex-col items-end">
+                    <div className="flex items-center">
+                      <BsArrowLeftSquare className="mr-2" />
+                      Previous
+                    </div>
+                    <span className="text-sm text-muted-foreground">
+                      {prevPhoto.title.length > maxTextLinkLength
+                        ? prevPhoto.title.substring(0, maxTextLinkLength) +
+                          "..."
+                        : prevPhoto.title}
+                    </span>
+                  </Button>
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className="flex items-center gap-x-1 text-sm">
+                  <BsArrowLeftSquare />
+                  View previous image
+                </p>
+              </TooltipContent>
+            </Tooltip>
           )}
         </div>
 
         <div>
           {nextPhoto && (
-            <a href={`/photography/${nextPhoto.id}`}>
-              <Button variant="link" className="flex-col items-end">
-                <div className="flex items-center">
-                  Next
-                  <IoArrowForward className="ml-2" />
-                </div>
-                <span className="text-sm text-muted-foreground">
-                  {nextPhoto.title.length > maxTextLinkLength
-                    ? nextPhoto.title.substring(0, maxTextLinkLength) + "..."
-                    : nextPhoto.title}
-                </span>
-              </Button>
-            </a>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a href={`/photography/${nextPhoto.id}`}>
+                  <Button variant="link" className="flex-col items-end">
+                    <div className="flex items-center">
+                      Next
+                      <BsArrowRightSquare className="ml-2" />
+                    </div>
+                    <span className="text-sm text-muted-foreground">
+                      {nextPhoto.title.length > maxTextLinkLength
+                        ? nextPhoto.title.substring(0, maxTextLinkLength) +
+                          "..."
+                        : nextPhoto.title}
+                    </span>
+                  </Button>
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className="flex items-center gap-x-1 text-sm">
+                  View next image
+                  <BsArrowRightSquare />
+                </p>
+              </TooltipContent>
+            </Tooltip>
           )}
         </div>
       </div>
