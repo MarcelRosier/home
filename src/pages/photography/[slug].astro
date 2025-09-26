@@ -21,5 +21,5 @@ const { photo } = Astro.props;
 ---
 
 <Layout title={`Marcel Rosier`}>
-  <PhotoDetail photo={photo} />
+  <PhotoDetail photo={photo} client:load />
 </Layout>
