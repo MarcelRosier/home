@@ -17,8 +17,7 @@ const fadeInUp = {
 function Photography() {
   // Always show 3 rows: 3 images on mobile (1 col), 6 on tablet (2 cols), 9 on desktop (3 cols)
   // We'll use 9 as the max since that covers all breakpoints with 3 rows
-  const displayedPhotos = photos.slice(0, 9);
-  const hasMorePhotos = photos.length > 9;
+  const displayedPhotos = photos.slice(0, 6);
 
   return (
     <section className="mt-10">
@@ -36,31 +35,29 @@ function Photography() {
       </motion.h2>
       <Gallery photos={displayedPhotos} />
 
-      {hasMorePhotos && (
-        <motion.div
-          className="mt-6 flex justify-center"
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <a href={"/photography"}>
-                <Button variant="outline">
-                  <span>...</span>
-                  <span className="sr-only">More</span>
-                </Button>
-              </a>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p className="flex items-center gap-x-1 text-sm">
-                Checkout all my photos
-              </p>
-            </TooltipContent>
-          </Tooltip>
-        </motion.div>
-      )}
+      <motion.div
+        className="mt-6 flex justify-center"
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <a href={"/photography"}>
+              <Button variant="outline">
+                <span>...</span>
+                <span className="sr-only">More</span>
+              </Button>
+            </a>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p className="flex items-center gap-x-1 text-sm">
+              Checkout all my photos
+            </p>
+          </TooltipContent>
+        </Tooltip>
+      </motion.div>
     </section>
   );
 }
