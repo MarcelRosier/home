@@ -39,7 +39,7 @@ function Gallery({ photos }: Props) {
                 src={photo.url}
                 alt={photo.title}
                 className="w-full h-64"
-                aspectRatio="square"
+                variant="thumbnail"
                 priority={index < 6}
                 blur={true}
               />

@@ -9,7 +9,7 @@ interface OptimizedImageProps {
   priority?: boolean;
   quality?: number;
   blur?: boolean;
-  aspectRatio?: "square" | "auto";
+  variant?: "thumbnail" | "medium";
   onClick?: () => void;
 }
 
@@ -19,9 +19,8 @@ export default function OptimizedImage({
   className,
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
   priority = false,
-  quality = 80,
-  blur = true,
-  aspectRatio = "auto",
+  blur = false,
+  variant = "thumbnail",
   onClick,
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -80,7 +79,7 @@ export default function OptimizedImage({
 
         // Then load the appropriate size
         const targetSrc =
-          aspectRatio === "square" ? sources.thumb : sources.medium;
+          variant === "thumbnail" ? sources.thumb : sources.medium;
 
         const img = new Image();
         img.src = targetSrc;
@@ -101,7 +100,7 @@ export default function OptimizedImage({
     };
 
     loadImage();
-  }, [isVisible, filename, blur, aspectRatio]);
+  }, [isVisible, filename, blur, variant]);
 
   // Handle image load success
   const handleLoad = () => {
@@ -119,11 +118,7 @@ export default function OptimizedImage({
   return (
     <div
       ref={imgRef}
-      className={cn(
-        "relative overflow-hidden bg-muted",
-        aspectRatio === "square" && "aspect-square",
-        className
-      )}
+      className={cn("relative overflow-hidden bg-muted", className)}
       onClick={onClick}
     >
       {/* Loading placeholder */}
@@ -139,7 +134,8 @@ export default function OptimizedImage({
           src={currentSrc}
           alt={alt}
           className={cn(
-            "h-full w-full object-cover transition-all duration-500",
+            "h-full w-full transition-all duration-500",
+            variant === "thumbnail" ? "object-cover" : "",
             isLoaded ? "opacity-100" : "opacity-0",
             blur && !isLoaded && "blur-sm scale-110",
             onClick &&

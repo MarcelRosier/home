@@ -9,6 +9,7 @@ import photos from "@/data/photos.json";
 import { useEffect } from "react";
 import { BsArrowLeftSquare, BsArrowRightSquare } from "react-icons/bs";
 import { IoArrowBack, IoCalendar, IoLocation } from "react-icons/io5";
+import { RiGalleryView2 } from "react-icons/ri";
 
 type Photo = {
   id: string;
@@ -54,8 +55,8 @@ export default function PhotoDetail({ photo }: Props) {
       {/* Back Navigation */}
       <div className="mb-6">
         <a href="/photography">
-          <Button variant={"link"}>
-            <IoArrowBack className="mr-1" />
+          <Button variant={"ghost"}>
+            <RiGalleryView2 className="mr-1" />
             Gallery
           </Button>
         </a>
@@ -69,10 +70,10 @@ export default function PhotoDetail({ photo }: Props) {
             <OptimizedImage
               src={photo.url}
               alt={photo.title}
-              className="w-full h-auto max-h-[50vh] object-contain"
-              aspectRatio="auto"
+              className="h-auto w-auto"
+              variant="medium"
               priority={true}
-              blur={true}
+              blur={false}
             />
           </div>
         </div>
