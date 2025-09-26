@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "optimize-images": "./scripts/optimize-images.sh",
+    "watch-images": "./scripts/watch-images.sh"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",

@@ -4,6 +4,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import photos from "@/data/photos.json";
 import { useEffect } from "react";
 import { BsArrowLeftSquare, BsArrowRightSquare } from "react-icons/bs";
@@ -65,13 +66,13 @@ export default function PhotoDetail({ photo }: Props) {
         {/* Main Image */}
         <div className="lg:col-span-2">
           <div className="relative overflow-hidden rounded-lg shadow-xl">
-            <img
+            <OptimizedImage
               src={photo.url}
               alt={photo.title}
-              className="w-full h-auto object-contain max-h-[80vh] transition-opacity duration-300"
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
+              className="w-full h-auto max-h-[50vh] object-contain"
+              aspectRatio="auto"
+              priority={true}
+              blur={true}
             />
           </div>
         </div>

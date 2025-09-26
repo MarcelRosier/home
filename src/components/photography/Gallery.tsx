@@ -1,4 +1,5 @@
 import { motion, easeOut } from "motion/react";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 type Props = {
   photos: Array<{ url: string; title: string; location?: string; id?: string }>;
@@ -34,13 +35,13 @@ function Gallery({ photos }: Props) {
               href={`/photography/${photoSlug}`}
               className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block"
             >
-              <img
+              <OptimizedImage
                 src={photo.url}
                 alt={photo.title}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                loading={index < 6 ? "eager" : "lazy"}
-                decoding="async"
-                fetchPriority={index < 3 ? "high" : "low"}
+                className="w-full h-64"
+                aspectRatio="square"
+                priority={index < 6}
+                blur={true}
               />
 
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
