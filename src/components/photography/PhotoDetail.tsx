@@ -73,7 +73,7 @@ export default function PhotoDetail({ photo }: Props) {
               className="h-auto w-auto"
               variant="medium"
               priority={true}
-              blur={false}
+              blur={true}
             />
           </div>
         </div>
