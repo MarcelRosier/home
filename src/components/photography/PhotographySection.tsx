@@ -55,7 +55,7 @@ function Photography() {
           </TooltipTrigger>
           <TooltipContent>
             <p className="flex items-center gap-x-1 text-sm">
-              Checkout all my photos
+              Want to see more?
             </p>
           </TooltipContent>
         </Tooltip>
