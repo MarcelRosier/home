@@ -1,14 +1,14 @@
-import { motion, easeOut } from "motion/react";
-import { FaCameraRetro } from "react-icons/fa";
-import photos from "@/data/photos.json";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import photos from "@/data/photos.json";
+import { easeOut, motion } from "motion/react";
+import { FaCameraRetro } from "react-icons/fa";
 import { Button } from "../ui/button";
 import Gallery from "./Gallery";
-
+import { RiGalleryView2 } from "react-icons/ri";
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeOut } },
@@ -45,8 +45,10 @@ function Photography() {
         <Tooltip>
           <TooltipTrigger asChild>
             <a href={"/photography"}>
-              <Button variant="outline">
-                <span>...</span>
+              <Button variant="outline" className="cursor-pointer">
+                <span className="flex items-center">
+                  <RiGalleryView2 className="mr-2" /> Complete Gallery
+                </span>
                 <span className="sr-only">More</span>
               </Button>
             </a>
