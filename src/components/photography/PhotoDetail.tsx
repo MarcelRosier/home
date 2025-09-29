@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import OptimizedImage from "@/components/ui/OptimizedImage";
 import photos from "@/data/photos.json";
 import { useEffect } from "react";
 import { BsArrowLeftSquare, BsArrowRightSquare } from "react-icons/bs";
-import { IoArrowBack, IoCalendar, IoLocation } from "react-icons/io5";
+import { IoCalendar, IoLocation } from "react-icons/io5";
 import { RiGalleryView2 } from "react-icons/ri";
 
 type Photo = {

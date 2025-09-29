@@ -12,6 +12,7 @@ import {
   SiGooglescholar,
   SiInstagram,
 } from "react-icons/si";
+import { FaGoodreads } from "react-icons/fa";
 
 type IconLinkProps = {
   href: string;
@@ -67,6 +68,11 @@ export function Footer() {
               href="https://www.instagram.com/marcel.stills/"
               icon={SiInstagram}
               label="Instagram Photography Profile"
+            />
+            <IconLink
+              href="https://www.goodreads.com/user/show/176637630-marcel"
+              icon={FaGoodreads}
+              label="Goodreads Profile"
             />
           </div>
 
